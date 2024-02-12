@@ -99,7 +99,7 @@ class Testc35:
     @pytest.fixture
     def load_input(self):
         path = os.path.join(
-            os.path.dirname(__file__), 'c35_test_input.csv'
+            os.path.dirname(__file__), 'data/c35_test_input.csv'
         )
         data = list(csv.reader(open(path)))
         input_data = {i[0]: np.array(i[1:], dtype=float) for i in zip(*data)}
@@ -109,7 +109,7 @@ class Testc35:
     @pytest.fixture
     def load_expected(self):
         path = os.path.join(
-            os.path.dirname(__file__), 'c35_test_expected.csv'
+            os.path.dirname(__file__), 'data/c35_test_expected.csv'
         )
         data = list(csv.reader(open(path)))
         expected = {i[0]: np.array(i[1:], dtype=float) for i in zip(*data)}
